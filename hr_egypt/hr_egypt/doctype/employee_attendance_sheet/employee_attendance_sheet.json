@@ -1,0 +1,100 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-11-23 12:57:08.620077",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "column_break_2",
+  "start_date",
+  "column_break_4",
+  "end_date",
+  "check_in_sheet_section",
+  "check_in_sheet",
+  "section_break_8",
+  "total_penalty",
+  "column_break_10",
+  "total_delay"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "check_in_sheet_section",
+   "fieldtype": "Section Break",
+   "label": "Check in Sheet"
+  },
+  {
+   "fieldname": "check_in_sheet",
+   "fieldtype": "Table",
+   "label": "Check in Sheet",
+   "options": "Check in Sheet"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_penalty",
+   "fieldtype": "Float",
+   "label": "Total Penalty"
+  },
+  {
+   "fieldname": "total_delay",
+   "fieldtype": "Duration",
+   "label": "Total Delay"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-11-29 14:07:08.830051",
+ "modified_by": "Administrator",
+ "module": "HR Egypt",
+ "name": "Employee Attendance Sheet",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

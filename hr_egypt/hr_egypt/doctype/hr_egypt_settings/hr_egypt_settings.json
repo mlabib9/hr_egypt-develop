@@ -1,0 +1,165 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-10-31 15:31:00.586232",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "attendance_setting_tab",
+  "attendance_settings",
+  "default_parameter_section",
+  "default_salary_component_for_delay",
+  "column_break_5",
+  "default_actions_reason",
+  "section_break_7",
+  "default_actions_description",
+  "work_leave_tab",
+  "max_time",
+  "column_break_11",
+  "max_number_monthly",
+  "overtime_settings_tab",
+  "enable_overtime_request",
+  "column_break_15",
+  "overtime_after"
+ ],
+ "fields": [
+  {
+   "fieldname": "attendance_setting_tab",
+   "fieldtype": "Tab Break",
+   "label": "Attendance Settings"
+  },
+  {
+   "fieldname": "work_leave_tab",
+   "fieldtype": "Tab Break",
+   "label": "Work Leave"
+  },
+  {
+   "fieldname": "max_time",
+   "fieldtype": "Duration",
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "in_list_view": 1,
+   "label": "Max Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "max_number_monthly",
+   "fieldtype": "Int",
+   "label": "Max Number Monthly",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attendance_settings",
+   "fieldtype": "Table",
+   "label": "Attendance Settings",
+   "options": "Attendance Settings"
+  },
+  {
+   "fieldname": "default_salary_component_for_delay",
+   "fieldtype": "Link",
+   "label": "Default Salary Component For Delay",
+   "options": "Salary Component",
+   "reqd": 1
+  },
+  {
+   "fieldname": "default_parameter_section",
+   "fieldtype": "Tab Break",
+   "label": "Default Parameters"
+  },
+  {
+   "fieldname": "default_actions_reason",
+   "fieldtype": "Link",
+   "label": "Default Actions Reason",
+   "options": "Investigation Reason"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "default_actions_description",
+   "fieldtype": "Text Editor",
+   "label": "Default Actions Description "
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "overtime_settings_tab",
+   "fieldtype": "Tab Break",
+   "label": "Overtime Settings"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.enable_overtime_request",
+   "fieldname": "overtime_after",
+   "fieldtype": "Duration",
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "label": "Overtime After",
+   "mandatory_depends_on": "eval:doc.enable_overtime_request"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_overtime_request",
+   "fieldtype": "Check",
+   "label": "Enable Overtime Request"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-01-01 09:34:56.513776",
+ "modified_by": "Administrator",
+ "module": "Hr Egypt",
+ "name": "HR Egypt Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Employee",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "HR User",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,86 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2022-11-23 15:12:11.133214",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "shift",
+  "shift_start",
+  "column_break_4",
+  "delay",
+  "penalty",
+  "column_break_7",
+  "repeat",
+  "penalty_action"
+ ],
+ "fields": [
+  {
+   "fieldname": "shift",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shift",
+   "print_width": "1",
+   "width": "1"
+  },
+  {
+   "fieldname": "shift_start",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Shift Start",
+   "print_width": "1",
+   "width": "1"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "delay",
+   "fieldtype": "Duration",
+   "in_list_view": 1,
+   "label": "Delay",
+   "print_width": "1",
+   "width": "1"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "penalty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Penalty",
+   "print_width": "1",
+   "width": "1"
+  },
+  {
+   "fieldname": "repeat",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Repeat",
+   "print_width": "1",
+   "width": "1"
+  },
+  {
+   "fieldname": "penalty_action",
+   "fieldtype": "Data",
+   "label": "Penalty Action"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-12-01 11:14:08.820616",
+ "modified_by": "Administrator",
+ "module": "HR Egypt",
+ "name": "Check in Sheet",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

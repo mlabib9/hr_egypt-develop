@@ -1,0 +1,311 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:MS-{start_date}-{area}-{#}",
+ "creation": "2022-09-18 10:40:11.730214",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_5",
+  "employee",
+  "company",
+  "column_break_3",
+  "start_date",
+  "status",
+  "column_break_5",
+  "end_date",
+  "actual_end_date",
+  "section_break_12",
+  "city",
+  "asd",
+  "area",
+  "description_section",
+  "description",
+  "end_date_section",
+  "mission_members_section",
+  "mission_members",
+  "section_break_10",
+  "mission_vehicles",
+  "reference_section",
+  "mission_references",
+  "mission_settings_tab",
+  "investigation_settings",
+  "create_investigation_for_absent_employees",
+  "column_break_25",
+  "investigation_reason",
+  "investigation__description_section",
+  "investigation__description",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Company name",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Tab Break",
+   "label": "Mission Details"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Mission Leader",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break",
+   "label": "Mission Vehicles"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break",
+   "label": "Destination"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Mission References"
+  },
+  {
+   "fieldname": "end_date_section",
+   "fieldtype": "Section Break",
+   "label": "End Date"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "actual_end_date",
+   "fieldtype": "Data",
+   "label": "Actual End Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "area",
+   "fieldtype": "Link",
+   "label": "Area",
+   "options": "Area",
+   "reqd": 1
+  },
+  {
+   "fieldname": "asd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Link",
+   "label": "City",
+   "options": "City",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mission_members_section",
+   "fieldtype": "Tab Break",
+   "label": "Mission Members"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Mission",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "mission_members",
+   "fieldtype": "Table",
+   "label": "Mission Members",
+   "options": "Mission Members",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mission_vehicles",
+   "fieldtype": "Table",
+   "label": "Mission Vehicles",
+   "options": "Mission Vehicles"
+  },
+  {
+   "fieldname": "mission_references",
+   "fieldtype": "Table",
+   "label": "Mission References",
+   "options": "Mission References"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description_section",
+   "fieldtype": "Section Break",
+   "label": "Mission Description"
+  },
+  {
+   "fieldname": "mission_settings_tab",
+   "fieldtype": "Tab Break",
+   "label": "Mission Settings"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "create_investigation_for_absent_employees",
+   "fieldtype": "Check",
+   "label": "Create Investigation For Absent Employees"
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.create_investigation_for_absent_employees == 1",
+   "fieldname": "investigation_reason",
+   "fieldtype": "Link",
+   "label": "Investigation Reason",
+   "mandatory_depends_on": "eval:doc.create_investigation_for_absent_employees == 1",
+   "options": "Investigation Reason"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "status",
+   "options": "\nDraft\nOpened\nEnded",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.create_investigation_for_absent_employees == 1",
+   "fieldname": "investigation__description",
+   "fieldtype": "Text Editor",
+   "label": "Investigation  Description",
+   "mandatory_depends_on": "eval:doc.create_investigation_for_absent_employees == 1"
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "investigation__description_section",
+   "fieldtype": "Section Break",
+   "label": "Investigation  Description"
+  },
+  {
+   "fieldname": "investigation_settings",
+   "fieldtype": "Section Break",
+   "label": "Investigation Settings"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-12-04 10:59:00.060717",
+ "modified_by": "Administrator",
+ "module": "HR Egypt",
+ "name": "Mission",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Green",
+   "title": "Ended"
+  }
+ ]
+}
